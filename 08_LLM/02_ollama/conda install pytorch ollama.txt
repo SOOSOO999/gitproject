@@ -1,0 +1,48 @@
+conda install pytorch ollama
+
+
+runpod에서
+1.Pods 들어가서
+2. deploy a pot 누르고
+3. A40 선택
+4. Pod Name 설정 (강사님은 SKN11으로 하심)
+5. On-Demand
+6. Start Jupyter Notebook 체크
+7. 맨 밑에 deploy 머시기 눌러서 생성
+8. 생성된거 눌러서 Connect 활성화 되기까지 기다렸다가 Connect 누르기
+9. Jupyterlab 클릭 -> Jupyterlab 열림.
+
+
+1. connect 누르고 
+2. Web terminal start눌러서 시작
+3. open web terminal 클릭 -> 뜨는 창이 리눅스 환경. 리눅스 명령어를 쓸것
+4. 올라마 설치 한가지, 모델을 pull 할 것임. (runpod 오른쪽 상단 docs - > tutorials -> Pods -> Set up Ollama on your GPU pod 설명보면서)
+
+apt 머시기 -> 하드웨어 정보를 뽑아낼 수 있게 해주는거
+
+curl 머시기 : 올라마를 설치하고, 백그라운드에서 설치되게끔 해주는 명령어
+
+ollama run [model name] : pull은 로드를 받아서 올라마 통해서 다운받아서 가지고만 있는것이고, run은 수행까지 한다
+					(있으면 수행, 없으면 pull까지 해서 수행)
+
+
+
+복붙한거 shift + insert 
+
+1.
+apt update
+apt install lshw
+
+2.
+(curl -fsSL https://ollama.com/install.sh | sh && ollama serve > ollama.log 2>&1) &
+
+3. ollama run llama3  입력
+
+4. 대화 시작  -> ctrl +  d 누르면 빠져나올 수 있음. 
+
+
+선 터미널창 작업 -> 후 주피터노트북 열어주는 것이 좋다. (주피터노트북 실행중에 터미널창 작업하면 반영 안될때도 있어서)
+
+
+----------------------------------
+docs - > tutorials -> Pods -> Set up Ollama on your GPU pod 
